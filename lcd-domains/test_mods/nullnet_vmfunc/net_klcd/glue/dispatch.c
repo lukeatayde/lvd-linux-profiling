@@ -72,7 +72,7 @@ int net_klcd_dispatch_loop(struct fipc_message *message)
 		ret = alloc_netdev_mqs_callee(message);
 		break;
 	case CONSUME_SKB:
-		/* trace(CONSUME_SKB); */
+		trace(CONSUME_SKB);
 		ret = consume_skb_callee(message);
 		break;
 	default:
